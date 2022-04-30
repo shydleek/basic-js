@@ -15,7 +15,7 @@ function getSeason(date) {
   if (date === undefined) {
     return 'Unable to determine the time of year!';
   }
-  else if (date instanceof Date && typeof date.getMonth === 'function' && Object.prototype.toString.call(date) === '[object Date]') {
+  else if (date instanceof Date && typeof date.getMonth === 'function' && Object.prototype.toString.call(date) === '[object Date]' && Object.getOwnPropertyNames(date).length === 0) {
     let month = date.getMonth();
     switch (month) {
       case 0:
